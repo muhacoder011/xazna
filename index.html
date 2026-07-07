@@ -26,7 +26,7 @@
       </div>
       <div class="nav-actions">
         <button class="lang-switch" id="langSwitch">🌐 UZ</button>
-        <a href="#pricing" class="btn btn-primary btn-sm" data-i18n="nav_start">Boshlash</a>
+        <a href="#pricing" class="btn btn-primary btn-sm" data-action="start" data-i18n="nav_start">Boshlash</a>
       </div>
       <div class="mobile-toggle" id="mobileToggle">
         <span></span>
@@ -43,7 +43,7 @@
     <a href="#rewards" class="mobile-nav-link" data-i18n="nav_rewards">Mukofotlar</a>
     <a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Obuna</a>
     <a href="#partners" class="mobile-nav-link" data-i18n="nav_partners">Hamkorlar</a>
-    <a href="#pricing" class="btn btn-primary" data-i18n="nav_start">Boshlash</a>
+    <a href="#pricing" class="btn btn-primary" data-action="start" data-i18n="nav_start">Boshlash</a>
   </div>
   <!-- ====== HERO ====== -->
   <section class="hero" id="hero">
@@ -66,7 +66,7 @@
           Bo'sh vaqtingizni befoyda o'tkazmang. Shahringizni kashf eting, topshiriqlarni bajaring, ball yig'ing va haqiqiy mukofotlar — bepul ovqatdan tortib boshqa shaharlarga sayohatgacha — yutib oling!
         </p>
         <div class="hero-actions">
-          <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="hero_cta">
+          <a href="#pricing" class="btn btn-primary btn-lg" data-action="start" data-i18n="hero_cta">
             🚀 Sarguzashtni boshlash
           </a>
           <a href="#how-it-works" class="btn btn-secondary btn-lg" data-i18n="hero_cta2">
@@ -385,7 +385,7 @@
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f3">Bronza darajagacha mukofotlar</span></div>
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f4">Jamoa tizimi</span></div>
           </div>
-          <button class="btn btn-secondary" style="width:100%;" data-i18n="plan1_btn">Bepul boshlash</button>
+          <button class="btn btn-secondary" style="width:100%;" data-action="subscribe" data-plan-name="Bepul" data-i18n="plan1_btn">Bepul boshlash</button>
         </div>
         <!-- Pro -->
         <div class="pricing-card glass-card featured reveal reveal-delay-2">
@@ -406,7 +406,7 @@
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f4">Aviasales/iTicket integratsiyasi</span></div>
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f5">Ustuvor qo'llab-quvvatlash</span></div>
           </div>
-          <button class="btn btn-primary" style="width:100%;" data-i18n="plan2_btn">Pro obunani tanlash</button>
+          <button class="btn btn-primary" style="width:100%;" data-action="subscribe" data-plan-name="Pro" data-i18n="plan2_btn">Pro obunani tanlash</button>
         </div>
         <!-- Elite -->
         <div class="pricing-card glass-card reveal reveal-delay-3">
@@ -426,7 +426,7 @@
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f4">Shaxsiy sarguzasht maslahatchisi</span></div>
             <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f5">Xalqaro sayohat imkoniyati</span></div>
           </div>
-          <button class="btn btn-warm" style="width:100%;" data-i18n="plan3_btn">Elite obunani tanlash</button>
+          <button class="btn btn-warm" style="width:100%;" data-action="subscribe" data-plan-name="Elite" data-i18n="plan3_btn">Elite obunani tanlash</button>
         </div>
       </div>
     </div>
@@ -578,6 +578,7 @@
       </div>
     </div>
   </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
 </body>
 </html>

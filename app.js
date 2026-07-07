@@ -42,6 +42,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const toast = document.getElementById('toast');
+
+  function showToast(message, type = 'info') {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.className = `toast show ${type}`;
+    clearTimeout(showToast.timeout);
+    showToast.timeout = setTimeout(() => {
+      toast.className = 'toast';
+    }, 2600);
+  }
+
+  function scrollToPricing() {
+    const pricingSection = document.getElementById('pricing');
+    if (!pricingSection) return;
+    const navHeight = navbar ? navbar.offsetHeight : 0;
+    const targetPosition = pricingSection.offsetTop - navHeight - 20;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  document.querySelectorAll('[data-action="start"]').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      scrollToPricing();
+      showToast('Sarguzashtni boshlash uchun obuna rejasini tanlang.', 'success');
+    });
+  });
+
+  document.querySelectorAll('[data-action="subscribe"]').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const planName = button.dataset.planName || 'Obuna';
+
+      document.querySelectorAll('[data-action="subscribe"]').forEach(otherButton => {
+        otherButton.classList.remove('is-selected');
+        otherButton.closest('.pricing-card')?.classList.remove('selected');
+      });
+
+      button.textContent = `${planName} tanlandi ✓`;
+      button.classList.add('is-selected');
+      button.closest('.pricing-card')?.classList.add('selected');
+      showToast(`${planName} obuna tanlandi. Tez orada bog'lanamiz!`, 'success');
+      scrollToPricing();
+    });
+  });
+
   // ---- Pricing toggle (monthly / yearly) ----
   const pricingToggle = document.getElementById('pricingToggle');
   const toggleMonthly = document.getElementById('toggleMonthly');
