@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarguzasht — Har kuningizni sarguzashtga aylantiring</title>
+  <meta name="description" content="Sarguzasht — O'zbekiston va Markaziy Osiyo bo'ylab gamifikatsiya asosida sarguzashtlar rejalashtiring, ball yig'ing va ajoyib mukofotlar yutib oling!">
+  <meta name="keywords" content="sarguzasht, adventure, Uzbekistan, gamification, travel, sayohat, mukofot">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+</head>
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">🧭</div>
+        <span>Sarguzasht</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works" data-i18n="nav_how">Qanday ishlaydi</a>
+        <a href="#features" data-i18n="nav_features">Imkoniyatlar</a>
+        <a href="#rewards" data-i18n="nav_rewards">Mukofotlar</a>
+        <a href="#pricing" data-i18n="nav_pricing">Obuna</a>
+        <a href="#partners" data-i18n="nav_partners">Hamkorlar</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-switch" id="langSwitch">🌐 UZ</button>
+        <a href="#pricing" class="btn btn-primary btn-sm" data-i18n="nav_start">Boshlash</a>
+      </div>
+      <div class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-close" id="mobileNavClose">✕</div>
+    <a href="#how-it-works" class="mobile-nav-link" data-i18n="nav_how">Qanday ishlaydi</a>
+    <a href="#features" class="mobile-nav-link" data-i18n="nav_features">Imkoniyatlar</a>
+    <a href="#rewards" class="mobile-nav-link" data-i18n="nav_rewards">Mukofotlar</a>
+    <a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Obuna</a>
+    <a href="#partners" class="mobile-nav-link" data-i18n="nav_partners">Hamkorlar</a>
+    <a href="#pricing" class="btn btn-primary" data-i18n="nav_start">Boshlash</a>
+  </div>
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero_badge">Markaziy Osiyoda birinchi gamifikatsiya platformasi</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero_title" data-i18n-html="true">
+          Har kuningizni <span class="text-gradient">sarguzashtga</span> aylantiring
+        </h1>
+        <p class="hero-description" data-i18n="hero_desc">
+          Bo'sh vaqtingizni befoyda o'tkazmang. Shahringizni kashf eting, topshiriqlarni bajaring, ball yig'ing va haqiqiy mukofotlar — bepul ovqatdan tortib boshqa shaharlarga sayohatgacha — yutib oling!
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="hero_cta">
+            🚀 Sarguzashtni boshlash
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg" data-i18n="hero_cta2">
+            Qanday ishlaydi?
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">150+</div>
+            <div class="hero-stat-label" data-i18n="stat_cities">Shahar va joylashuv</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">1000+</div>
+            <div class="hero-stat-label" data-i18n="stat_quests">Topshiriqlar</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">50K+</div>
+            <div class="hero-stat-label" data-i18n="stat_users">Sarguzashtchilar</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <div class="phone-greeting" data-i18n="phone_greeting">Assalomu alaykum 👋</div>
+              <div class="phone-username">Sardor</div>
+              <div class="phone-xp-bar">
+                <div class="phone-xp-fill"></div>
+              </div>
+            </div>
+            <div class="phone-quest-card">
+              <div class="quest-top">
+                <div class="quest-icon food">🍽️</div>
+                <span class="quest-xp">+120 XP</span>
+              </div>
+              <div class="quest-title" data-i18n="quest1_title">Milliy taom sinash</div>
+              <div class="quest-location">📍 Lyabi Hovuz, <span data-i18n="quest1_city">Buxoro</span></div>
+            </div>
+            <div class="phone-quest-card">
+              <div class="quest-top">
+                <div class="quest-icon travel">✈️</div>
+                <span class="quest-xp">+300 XP</span>
+              </div>
+              <div class="quest-title" data-i18n="quest2_title">Yangi shahar kashf qilish</div>
+              <div class="quest-location">📍 Registon, <span data-i18n="quest2_city">Samarqand</span></div>
+            </div>
+            <div class="phone-quest-card">
+              <div class="quest-top">
+                <div class="quest-icon culture">🏛️</div>
+                <span class="quest-xp">+80 XP</span>
+              </div>
+              <div class="quest-title" data-i18n="quest3_title">Muzey tashrifi</div>
+              <div class="quest-location">📍 <span data-i18n="quest3_place">Amir Temur muzeyi, Toshkent</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Floating badges -->
+        <div class="float-badge float-badge-1">
+          <span class="float-badge-icon">🏆</span>
+          <div>
+            <div style="font-weight:700;">+500 XP</div>
+            <div style="font-size:0.65rem;color:var(--dark-400);" data-i18n="float_winner">Haftalik g'olib!</div>
+          </div>
+        </div>
+        <div class="float-badge float-badge-2">
+          <span class="float-badge-icon">🎁</span>
+          <div>
+            <div style="font-weight:700;" data-i18n="float_lunch">Bepul tushlik!</div>
+            <div style="font-size:0.65rem;color:var(--dark-400);" data-i18n="float_reward">Mukofot ochildi</div>
+          </div>
+        </div>
+        <div class="float-badge float-badge-3">
+          <span class="float-badge-icon">🗺️</span>
+          <div>
+            <div style="font-weight:700;" data-i18n="float_quests">3 ta quest</div>
+            <div style="font-size:0.65rem;color:var(--dark-400);" data-i18n="float_done">Bugun bajarildi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" data-i18n="how_label">Qanday ishlaydi</span>
+        <h2 class="section-title" data-i18n="how_title" data-i18n-html="true">4 ta oddiy qadam bilan <span class="text-gradient">sarguzashtingiz</span> boshlanadi</h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="how_subtitle">Ro'yxatdan o'ting, topshiriqlarni bajaring, ball yig'ing va haqiqiy mukofotlarni qo'lga kiriting.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-number">1</div>
+          <h3 class="step-title" data-i18n="step1_title">Ro'yxatdan o'ting</h3>
+          <p class="step-desc" data-i18n="step1_desc">Profilingizni yarating va qiziqishlaringizni tanlang — ovqat, sayohat, madaniyat yoki sport.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-number">2</div>
+          <h3 class="step-title" data-i18n="step2_title">Topshiriqlarni oling</h3>
+          <p class="step-desc" data-i18n="step2_desc">Joylashuvingiz va qiziqishlaringizga qarab kunlik sarguzashtlar va topshiriqlar oling.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-number">3</div>
+          <h3 class="step-title" data-i18n="step3_title">Ball yig'ing</h3>
+          <p class="step-desc" data-i18n="step3_desc">Har bir lokatsiyaga tashrif buyurib topshiriqlarni bajaring va XP ballarini yig'ing.</p>
+        </div>
+        <div class="step-card reveal reveal-delay-4">
+          <div class="step-number">4</div>
+          <h3 class="step-title" data-i18n="step4_title">Mukofot oling</h3>
+          <p class="step-desc" data-i18n="step4_desc">To'plagan ballaringiz evaziga bepul ovqat, sayohat va maxsus takliflardan foydalaning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== FEATURES ====== -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" data-i18n="feat_label">Imkoniyatlar</span>
+        <h2 class="section-title" data-i18n="feat_title" data-i18n-html="true">Har bir <span class="text-gradient-warm">sarguzashtchi</span> uchun</h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="feat_subtitle">Oddiy aholidan tortib turistlargacha — hammaga moslashgan platforma.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card glass-card reveal reveal-delay-1">
+          <div class="feature-icon">🗺️</div>
+          <h3 class="feature-title" data-i18n="f1_title">Aqlli rejalashtirish</h3>
+          <p class="feature-desc" data-i18n="f1_desc">AI sizning vaqtingiz, joylashuvingiz va qiziqishlaringizga qarab kunlik rejani tuzib beradi. Hech qachon zerikmaysiz!</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-2">
+          <div class="feature-icon">🏆</div>
+          <h3 class="feature-title" data-i18n="f2_title">Gamifikatsiya tizimi</h3>
+          <p class="feature-desc" data-i18n="f2_desc">XP ballar, darajalar, yutuqlar va reyting tizimi. Har bir qadam sizni mukofotga yaqinlashtiradi.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-3">
+          <div class="feature-icon">🎁</div>
+          <h3 class="feature-title" data-i18n="f3_title">Haqiqiy mukofotlar</h3>
+          <p class="feature-desc" data-i18n="f3_desc">Bepul ovqat, chegirmalar, 1-2 kunlik boshqa shaharga sayohat — virtual emas, haqiqiy sovg'alar!</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-4">
+          <div class="feature-icon">✈️</div>
+          <h3 class="feature-title" data-i18n="f4_title">Sayohat integratsiyasi</h3>
+          <p class="feature-desc" data-i18n="f4_desc">Aviasales va iTicket bilan integratsiya — chiptalarni to'g'ridan-to'g'ri ilovadan bron qiling.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-5">
+          <div class="feature-icon">📍</div>
+          <h3 class="feature-title" data-i18n="f5_title">Interaktiv xarita</h3>
+          <p class="feature-desc" data-i18n="f5_desc">Markaziy Osiyo bo'ylab barcha sarguzasht nuqtalari, restoran, muzey va diqqatga sazovor joylar.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-6">
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title" data-i18n="f6_title">Jamoa sarguzashtlari</h3>
+          <p class="feature-desc" data-i18n="f6_desc">Do'stlaringiz bilan birgalikda topshiriqlarni bajaring va jamoaviy mukofotlarni qo'lga kiriting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== ADVENTURE MAP ====== -->
+  <section class="adventure-map section" id="map">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" data-i18n="map_label">Sarguzasht xaritasi</span>
+        <h2 class="section-title" data-i18n="map_title" data-i18n-html="true">Markaziy Osiyoni <span class="text-gradient">kashf eting</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="map_subtitle">O'zbekiston va qo'shni davlatlar bo'ylab yuzlab sarguzasht nuqtalari sizni kutmoqda.</p>
+      </div>
+      <div class="map-container reveal">
+        <div class="map-bg"></div>
+        <div class="map-grid-lines"></div>
+        <svg class="map-connections" viewBox="0 0 1200 450" preserveAspectRatio="none">
+          <line x1="520" y1="180" x2="350" y2="250" />
+          <line x1="520" y1="180" x2="680" y2="200" />
+          <line x1="350" y1="250" x2="200" y2="300" />
+          <line x1="680" y1="200" x2="850" y2="170" />
+          <line x1="520" y1="180" x2="600" y2="320" />
+          <line x1="850" y1="170" x2="950" y2="250" />
+        </svg>
+        <div class="map-pin" style="left:42%;top:35%;">
+          <div class="map-pin-dot primary"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_tashkent">Toshkent</span>
+            <div class="map-pin-quests">🔥 248 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:28%;top:52%;">
+          <div class="map-pin-dot warm"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_samarkand">Samarqand</span>
+            <div class="map-pin-quests">⭐ 186 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:15%;top:62%;">
+          <div class="map-pin-dot emerald"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_bukhara">Buxoro</span>
+            <div class="map-pin-quests">🏛️ 142 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:55%;top:42%;">
+          <div class="map-pin-dot gold"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_fergana">Farg'ona</span>
+            <div class="map-pin-quests">🍽️ 95 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:70%;top:35%;">
+          <div class="map-pin-dot cyan"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_bishkek">Bishkek</span>
+            <div class="map-pin-quests">🏔️ 78 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:48%;top:68%;">
+          <div class="map-pin-dot pink"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_dushanbe">Dushanbe</span>
+            <div class="map-pin-quests">✨ 64 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:78%;top:52%;">
+          <div class="map-pin-dot primary"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_almaty">Almati</span>
+            <div class="map-pin-quests">🏔️ 112 quest</div>
+          </div>
+        </div>
+        <div class="map-pin" style="left:8%;top:40%;">
+          <div class="map-pin-dot gold"></div>
+          <div class="map-pin-label">
+            <span data-i18n="city_khiva">Xiva</span>
+            <div class="map-pin-quests">🏛️ 88 quest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== REWARDS / GAMIFICATION ====== -->
+  <section class="rewards section" id="rewards">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" data-i18n="rew_label">Mukofotlar tizimi</span>
+        <h2 class="section-title" data-i18n="rew_title" data-i18n-html="true">Ko'proq sarguzasht = <span class="text-gradient-warm">kattaroq mukofot</span></h2>
+        <p class="section-subtitle" data-i18n="rew_subtitle">Qancha ko'p topshiriq bajarsangiz, shuncha yirik sovg'alar qo'lga kiritasiz.</p>
+      </div>
+      <div class="rewards-content">
+        <div class="reward-levels">
+          <div class="reward-level level-bronze reveal reveal-delay-1">
+            <div class="reward-level-icon">🥉</div>
+            <div class="reward-level-info">
+              <h4 data-i18n="lvl_bronze">Bronza daraja — 0-500 XP</h4>
+              <p data-i18n="lvl_bronze_desc">Kafelarda chegirmalar, bepul ichimliklar va maxsus aksiya kodlari.</p>
+            </div>
+          </div>
+          <div class="reward-level level-silver reveal reveal-delay-2">
+            <div class="reward-level-icon">🥈</div>
+            <div class="reward-level-info">
+              <h4 data-i18n="lvl_silver">Kumush daraja — 500-2000 XP</h4>
+              <p data-i18n="lvl_silver_desc">Bepul tushlik, restoranlarda maxsus taklif va premium topshiriqlar.</p>
+            </div>
+          </div>
+          <div class="reward-level level-gold reveal reveal-delay-3">
+            <div class="reward-level-icon">🥇</div>
+            <div class="reward-level-info">
+              <h4 data-i18n="lvl_gold">Oltin daraja — 2000-5000 XP</h4>
+              <p data-i18n="lvl_gold_desc">1-2 kunlik boshqa shaharga bepul sayohat va VIP tadbirlar.</p>
+            </div>
+          </div>
+          <div class="reward-level level-diamond reveal reveal-delay-4">
+            <div class="reward-level-icon">💎</div>
+            <div class="reward-level-info">
+              <h4 data-i18n="lvl_diamond">Olmos daraja — 5000+ XP</h4>
+              <p data-i18n="lvl_diamond_desc">Xalqaro sayohatlar, eksklyuziv hodisalar va Sarguzasht elchisi maqomi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rewards-visual reveal">
+          <div class="trophy-showcase">
+            <div class="trophy-ring trophy-ring-1"></div>
+            <div class="trophy-ring trophy-ring-2"></div>
+            <div class="trophy-ring trophy-ring-3"></div>
+            <div class="trophy-center">🏆</div>
+            <div class="reward-float">🎁</div>
+            <div class="reward-float">✈️</div>
+            <div class="reward-float">🍽️</div>
+            <div class="reward-float">🎫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== PRICING ====== -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" data-i18n="price_label">Obuna rejalari</span>
+        <h2 class="section-title" data-i18n="price_title" data-i18n-html="true">Sarguzashtingizni <span class="text-gradient">tanlang</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="price_subtitle">Har bir sarguzashtchi uchun mos reja. Qancha yuqori obuna — shuncha katta mukofotlar!</p>
+      </div>
+      <div class="pricing-toggle reveal">
+        <span class="active" id="toggleMonthly" data-i18n="toggle_monthly">Oylik</span>
+        <div class="toggle-switch" id="pricingToggle"></div>
+        <span id="toggleYearly" data-i18n="toggle_yearly">Yillik</span>
+        <span class="pricing-save" data-i18n="toggle_save">-25% tejash</span>
+      </div>
+      <div class="pricing-grid">
+        <!-- Free / Starter -->
+        <div class="pricing-card glass-card reveal reveal-delay-1">
+          <div class="pricing-icon">🌱</div>
+          <h3 class="pricing-name" data-i18n="plan1_name">Boshlang'ich</h3>
+          <p class="pricing-desc" data-i18n="plan1_desc">Sarguzashtni sinab ko'rish uchun</p>
+          <div class="pricing-price">
+            <span class="pricing-amount" data-i18n="plan1_price">Bepul</span>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f1">Kuniga 2 ta topshiriq</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f2">Asosiy xarita</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f3">Bronza darajagacha mukofotlar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan1_f4">Jamoa tizimi</span></div>
+          </div>
+          <button class="btn btn-secondary" style="width:100%;" data-i18n="plan1_btn">Bepul boshlash</button>
+        </div>
+        <!-- Pro -->
+        <div class="pricing-card glass-card featured reveal reveal-delay-2">
+          <div class="pricing-popular" data-i18n="plan_popular">Eng mashhur</div>
+          <div class="pricing-icon">⚡</div>
+          <h3 class="pricing-name" data-i18n="plan2_name">Pro Sarguzashtchi</h3>
+          <p class="pricing-desc" data-i18n="plan2_desc">Jiddiy sarguzashtchilar uchun</p>
+          <div class="pricing-price">
+            <span class="pricing-amount" data-monthly="49" data-yearly="37">
+              <span class="pricing-currency">$</span><span class="price-value">49</span>
+            </span>
+            <span class="pricing-period" data-i18n="price_per_month">/oy</span>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f1">Cheksiz topshiriqlar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f2">Premium xarita va marshrutlar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f3">Oltin darajagacha mukofotlar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f4">Aviasales/iTicket integratsiyasi</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan2_f5">Ustuvor qo'llab-quvvatlash</span></div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;" data-i18n="plan2_btn">Pro obunani tanlash</button>
+        </div>
+        <!-- Elite -->
+        <div class="pricing-card glass-card reveal reveal-delay-3">
+          <div class="pricing-icon">💎</div>
+          <h3 class="pricing-name">Elite</h3>
+          <p class="pricing-desc" data-i18n="plan3_desc">Maksimal sarguzasht tajribasi</p>
+          <div class="pricing-price">
+            <span class="pricing-amount" data-monthly="99" data-yearly="74">
+              <span class="pricing-currency">$</span><span class="price-value">99</span>
+            </span>
+            <span class="pricing-period" data-i18n="price_per_month">/oy</span>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f1">Pro ning barcha imkoniyatlari</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f2">Olmos darajagacha mukofotlar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f3">VIP tadbirlar va ekskursiyalar</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f4">Shaxsiy sarguzasht maslahatchisi</span></div>
+            <div class="pricing-feature"><span class="check">✓</span> <span data-i18n="plan3_f5">Xalqaro sayohat imkoniyati</span></div>
+          </div>
+          <button class="btn btn-warm" style="width:100%;" data-i18n="plan3_btn">Elite obunani tanlash</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" data-i18n="test_label">Fikrlar</span>
+        <h2 class="section-title" data-i18n="test_title" data-i18n-html="true">Sarguzashtchilar <span class="text-gradient">nima deydi</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card reveal reveal-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="test1_text">"Oldin dam olish kunlari nimaga vaqt sarflashni bilmasdim. Endi har hafta yangi joy kashf qilaman va hatto bepul tushlik yutib oldim!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name" data-i18n="test1_name">Sardor Karimov</div>
+              <div class="testimonial-role" data-i18n="test1_role">Toshkent, dasturchi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card reveal reveal-delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="test2_text">"Samarqandga turistik sayohat qilganda bu ilovani ishlatdim. Odatiy turdan ancha qiziqarli va ko'p joylarni kashf qildim!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name" data-i18n="test2_name">Maria Petrova</div>
+              <div class="testimonial-role" data-i18n="test2_role">Moskva, turist</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card reveal reveal-delay-3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="test3_text">"Restoranlar uchun ajoyib reklama platformasi. Bizning mijozlar soni 40% ga oshdi. Hamkorlik juda foydali!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name" data-i18n="test3_name">Aziz Rahimov</div>
+              <div class="testimonial-role" data-i18n="test3_role">Buxoro, restoran egasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== PARTNERS ====== -->
+  <section class="partners section" id="partners">
+    <div class="container">
+      <div class="partners-content reveal">
+        <span class="section-label" data-i18n="part_label">Hamkorlar</span>
+        <h2 class="section-title" data-i18n="part_title" data-i18n-html="true">Ishonchli <span class="text-gradient">hamkorlar</span> bilan</h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="part_subtitle">Eng yaxshi sayohat xizmatlari bilan integratsiya — chiptalarni osongina bron qiling.</p>
+      </div>
+      <div class="partners-logos">
+        <div class="partner-logo reveal reveal-delay-1">
+          <div class="partner-icon">✈️</div>
+          <div class="partner-name">Aviasales</div>
+          <div class="partner-type" data-i18n="part_avia">Aviachiptalar</div>
+        </div>
+        <div class="partner-logo reveal reveal-delay-2">
+          <div class="partner-icon">🎫</div>
+          <div class="partner-name">iTicket</div>
+          <div class="partner-type" data-i18n="part_ticket">Tadbirlar va chiptalar</div>
+        </div>
+        <div class="partner-logo reveal reveal-delay-3">
+          <div class="partner-icon">🏨</div>
+          <div class="partner-name" data-i18n="part_hotels">Mehmonxonalar</div>
+          <div class="partner-type" data-i18n="part_hotels_type">Turar joylar</div>
+        </div>
+        <div class="partner-logo reveal reveal-delay-4">
+          <div class="partner-icon">🍽️</div>
+          <div class="partner-name" data-i18n="part_rest">Restoranlar</div>
+          <div class="partner-type" data-i18n="part_rest_type">Ovqatlanish nuqtalari</div>
+        </div>
+      </div>
+      <p class="partners-desc reveal" data-i18n="part_desc_html" data-i18n-html="true">
+        Bizning hamkorlik modeli — lokatsiya egalari uchun oylik yoki yillik reklama obunasi.
+        Sizning joyingiz minglab sarguzashtchilar tomonidan kashf etiladi va tashrif buyuriladi.
+        <strong>Hamkor bo'lishni xohlaysizmi?</strong>
+      </p>
+    </div>
+  </section>
+  <!-- ====== CTA ====== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2 class="cta-title" data-i18n="cta_title">Birinchi sarguzashtingizni<br>bugun boshlang! 🚀</h2>
+        <p class="cta-desc" data-i18n="cta_desc">50,000+ sarguzashtchiga qo'shiling va har kuningizni qiziqarli, foydali va mukofotli o'tkazing.</p>
+        <div class="cta-actions">
+          <a href="#pricing" class="btn btn-lg" style="background:#fff;color:#4263eb;font-weight:700;" data-i18n="cta_btn1">
+            Bepul ro'yxatdan o'tish
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg" data-i18n="cta_btn2">
+            Batafsil bilish
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">🧭</div>
+            <span>Sarguzasht</span>
+          </a>
+          <p data-i18n="footer_desc">Har kuningizni sarguzashtga aylantiring. O'zbekiston va Markaziy Osiyo bo'ylab gamifikatsiya asosida sayohat va kashfiyot platformasi.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Telegram">📱</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">🎬</a>
+            <a href="#" class="social-link" aria-label="Facebook">💬</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer_platform">Platforma</h4>
+          <a href="#how-it-works" data-i18n="nav_how">Qanday ishlaydi</a>
+          <a href="#features" data-i18n="nav_features">Imkoniyatlar</a>
+          <a href="#rewards" data-i18n="nav_rewards">Mukofotlar</a>
+          <a href="#pricing" data-i18n="footer_prices">Narxlar</a>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer_partnership">Hamkorlik</h4>
+          <a href="#" data-i18n="footer_rest_owners">Restoran egalari</a>
+          <a href="#" data-i18n="footer_hotels">Mehmonxonalar</a>
+          <a href="#" data-i18n="footer_agencies">Sayohat agentliklari</a>
+          <a href="#" data-i18n="footer_advertisers">Reklama beruvchilar</a>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer_support">Qo'llab-quvvatlash</h4>
+          <a href="#" data-i18n="footer_help">Yordam markazi</a>
+          <a href="#" data-i18n="footer_contact">Bog'lanish</a>
+          <a href="#" data-i18n="footer_privacy">Maxfiylik siyosati</a>
+          <a href="#" data-i18n="footer_terms">Foydalanish shartlari</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer_copy">© 2026 Sarguzasht. Barcha huquqlar himoyalangan.</p>
+        <div class="footer-bottom-links">
+          <a href="#" data-i18n="footer_priv_short">Maxfiylik</a>
+          <a href="#" data-i18n="footer_terms_short">Shartlar</a>
+          <a href="#">Cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
