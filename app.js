@@ -238,7 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const languages = ['UZ', 'RU', 'EN'];
   let currentLangIndex = 0;
 
+  const originalTranslations = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (!key) return;
+    originalTranslations[key] = el.hasAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
+  });
+
   const translations = {
+    UZ: {},
     RU: {
       nav_how: 'Как это работает',
       nav_features: 'Возможности',
@@ -539,12 +547,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyTranslations(lang) {
     const translationData = translations[lang];
-    if (!translationData) return;
-
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const value = translationData[key];
-      if (!value) return;
+      let value = null;
+
+      if (lang === 'UZ') {
+        value = originalTranslations[key];
+      } else if (translationData && translationData[key]) {
+        value = translationData[key];
+      }
+
+      if (value === null || value === undefined) return;
 
       if (el.hasAttribute('data-i18n-html')) {
         el.innerHTML = value;
